@@ -1,17 +1,4 @@
-// import 'package:flutter/material.dart';
-// import 'package:task/form_page.dart';
-// import 'package:task/display_page.dart';
-// void main() {
-//   runApp(MaterialApp(
-//     debugShowCheckedModeBanner:  false,
-//     initialRoute: 'form_page',
-//     routes: {
-//       'form_page': (context)=>FormPage(),
-//       'dispaly_page':(context)=>DisplayPage(),
-//
-//     },
-//   ));
-// }
+
 import 'package:flutter/material.dart';
 import 'form_page.dart';
 import 'display_page.dart';
@@ -29,7 +16,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => FormPage(),
-        '/display': (context) => DisplayPage(),
+        '//display': (context) => DisplayPage(userData: ModalRoute.of(context)!.settings.arguments as Map<String, String>),
       },
     );
   }
